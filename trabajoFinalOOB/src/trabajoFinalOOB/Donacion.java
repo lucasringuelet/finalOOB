@@ -1,28 +1,27 @@
 package trabajoFinalOOB;
 
+import java.util.Date;
+
 public class Donacion {
-	private String fecha;
+	private Date fecha;
 	private double monto;
 	private Organizacion organizacion;
 	private Donante donante;
-	private Coordinador coordinador;
-	private MedioPago medioPago;
 	
 	
 	
 	
-	public Donacion(String fecha, double monto, Organizacion organizacion, Donante donante, Coordinador coordinador,
-			MedioPago medioPago) {
+	public Donacion(Date fecha, double monto, Organizacion organizacion, Donante donante) {
 		super();
 		this.fecha = fecha;
-		this.monto = monto;
+		this.monto= monto;
 		this.organizacion = organizacion;
 		this.donante = donante;
-		this.coordinador = coordinador;
-		this.medioPago = medioPago;
+		
 	}
 	
-	public String getFecha() {
+	
+	public Date getFecha() {
 		return fecha;
 	}
 	
@@ -38,13 +37,6 @@ public class Donacion {
 		return donante;
 	}
 	
-	public Coordinador getCoordinador() {
-		return coordinador;
-	}
-	
-	public MedioPago getMedioPago() {
-		return medioPago;
-	}
 	
 	
 	

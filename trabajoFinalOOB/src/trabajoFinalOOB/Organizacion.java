@@ -9,12 +9,17 @@ public class Organizacion {
 	private String direccion;
 	private List<Donante> coleccionDonantes = new ArrayList<Donante>();
 	
-	public Organizacion(String denominacion,String repre,String direc, Donante don ) {
+	public Organizacion(String denominacion,String repre,String direc) {
 		this.setDenominacion(denominacion);
 		this.setRepresentante(repre);
 		this.setDireccion(direc);
-		this.agregarDonante(don);
 	}
+	
+	public boolean pertenece(Donante donante) {
+		
+		return this.coleccionDonantes.contains(donante);
+	}
+	
 	
 	public String getDenominacion() {
 		return denominacion;

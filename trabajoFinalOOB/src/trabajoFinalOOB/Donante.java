@@ -2,39 +2,47 @@ package trabajoFinalOOB;
 
 public class Donante {
 	private String nombre;
-	private int dni ;
-	private int telefono;
-	private int legajo;
-	
-	public Donante(String n, int dni, int tel, int leg) {
+	private double dni ;
+	private double telefono;
+	private double legajo;
+	private double numDonante;
+	public Donante(String n, double d, double e, double f) {
 		this.setNombre(n);
-		this.setDni(dni);
-		this.setTelefono(tel);
-		this.setLegajo(leg);
+		this.setDni(d);
+		this.setTelefono(e);
+		this.setLegajo(f);
+		this.generarNumeroDonante();
 	}
 	
+	public double getNumDonante() {
+		return numDonante;
+	}
+
+	private void generarNumeroDonante() {
+		this.numDonante=Math.random()*100+1;
+	}
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getDni() {
+	public double getDni() {
 		return dni;
 	}
-	public void setDni(int dni) {
+	public void setDni(double dni) {
 		this.dni = dni;
 	}
-	public int getTelefono() {
+	public double getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(double telefono) {
 		this.telefono = telefono;
 	}
-	public int getLegajo() {
+	public double getLegajo() {
 		return legajo;
 	}
-	public void setLegajo(int legajo) {
+	public void setLegajo(double legajo) {
 		this.legajo = legajo;
 	}
 	
